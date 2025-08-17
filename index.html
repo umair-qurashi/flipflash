@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#4a00e0" />
+</head>
+<body>
+  <div class="game-container">
+    <header>
+      <h1>🧠 Memory Match</h1>
+
+      <div class="top-controls">
+        <button id="toggle-theme">🌙 Dark Mode</button>
+        <button id="mute-toggle">🔊 Mute</button>
+      </div>
+
+      <div class="stats">
+        <span id="moves">Moves: 0</span>
+        <span id="timer">Time: 00:00</span>
+        <span id="best-moves">🏅 Best Moves: --</span>
+        <span id="best-time">⏱️ Best Time: --</span>
+      </div>
+
+      <button id="restart">🔄 Restart</button>
+      <button id="reset-best">🗑️ Reset Best</button>
+    </header>
+
+    <div class="grid" id="game-grid">
+      <!-- Cards will be generated here -->
+    </div>
+  </div>
+
+  <!-- Overlay behind popup -->
+  <div id="overlay" class="hidden"></div>
+
+  <!-- Win message popup -->
+  <div id="win-message" class="hidden">
+    <h1>🎉 You Won! 🎉</h1>
+    <p id="final-stats"></p>
+    <button id="play-again" style="margin-top: 20px;">🔁 Play Again</button>
+  </div>
+
+  <!-- How to Play Popup -->
+  <div id="how-to-play-popup" class="popup">
+    <div>
+      <h2>ℹ️ How to Play</h2>
+      <p>Flip the cards and match all emoji pairs using the fewest moves and shortest time possible!</p>
+      <ul>
+        <li>🔁 Click a card to flip it</li>
+        <li>🧠 Remember the emojis</li>
+        <li>🎯 Match all pairs to win</li>
+      </ul>
+      <button id="close-how">✅ Got It</button>
+    </div>
+  </div>
+
+  <!-- Confetti animation canvas -->
+  <canvas id="confetti-canvas" class="hidden"></canvas>
+
+  <!-- JS file -->
+  <script src="script.js"></script>
+</body>
+</html>
